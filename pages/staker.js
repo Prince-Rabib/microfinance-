@@ -2,6 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Button, Typography, Container, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import {makeStyles} from "@material-ui/core/styles";
+import Header from "./appbar";
 
 
 
@@ -100,21 +101,7 @@ export default function StakerPage() {
 
   return (
     <>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" className={classes.logo}>
-            MicroLoan
-          </Typography>
-          <nav>
-            <Button color="inherit">How It Works</Button>
-            <Button color="inherit">About Us</Button>
-            <Button color="inherit">Apply for Loan</Button>
-            <Button color="inherit">FAQ</Button>
-            <Button variant="outlined"color="inherit">Connected</Button>
-            
-          </nav>
-        </Toolbar>
-      </AppBar>
+     <Header/>
       <Container maxWidth="xl">
         <Box className={classes.section}>
           <Typography variant="h6" component="h3" className={classes.sectionTitle}>Total Balance: 50,000</Typography>

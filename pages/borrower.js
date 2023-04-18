@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button} from '@mui/material';
 import { styled } from '@mui/system';
+import Header from "./appbar";
 
 const LogoTypography = styled(Typography)({
     flexGrow: 1,
@@ -104,19 +105,7 @@ export default function BorrowerPage() {
     <>
 
     <div>
-    <AppBar position="static">
-        <Toolbar>
-          <LogoTypography variant="h6">
-            MicroLoan
-          </LogoTypography>
-          <nav>
-            <Button color="inherit">How It Works</Button>
-            <Button color="inherit">About Us</Button>
-            <Button color="inherit">Apply for Loan</Button>
-            <Button color="inherit">FAQ</Button>
-          </nav>
-        </Toolbar>
-      </AppBar>
+        <Header/>
     </div>
     
     <div>
