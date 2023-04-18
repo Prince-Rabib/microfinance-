@@ -22,6 +22,7 @@ export default function AppHeader() {
           <Button color="inherit">About Us</Button>
           <Button color="inherit">Apply for Loan</Button>
           <Button color="inherit">FAQ</Button>
+          <Button variant="outlined"color="inherit">Connect Metamask</Button>
         </nav>
       </Toolbar>
     </AppBar>
