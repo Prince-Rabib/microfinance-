@@ -5,12 +5,24 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Footer from './footer';
 import Header from "./appbar";
+import {makeStyles} from "@material-ui/core/styles";
 
 const LogoTypography = styled(Typography)({
   flexGrow: 1,
 });
 
+const useStyles = makeStyles((theme) => ({
+  spacing: {
+    marginTop: theme.spacing(2),
+  },
+  footer:{
+    marginBottom:theme.spacing(2)
+  }
+
+}));
+
 export default function Home() {
+  const classes = useStyles();
   return (
     <div>
       <Head>
@@ -38,9 +50,11 @@ export default function Home() {
           </Grid>
         </Container>
       </Box>
-
-      <Container maxWidth="lg" className="services-section">
-        <Grid container spacing={2} alignItems="center" justify="center">
+       <div className={classes.spacing}>
+          
+       </div>
+      <Container maxWidth="lg" className="services-section" >
+        <Grid container spacing={8} alignItems="center" justify="center">
           <Grid item xs={12} md={4}>
             <Card>
               <CardMedia
@@ -84,7 +98,7 @@ export default function Home() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link href="/lend" passHref>
+                <Link href="/loan" passHref>
                   <Button variant="contained" color="primary">
                     Get Started
                   </Button>
@@ -121,6 +135,9 @@ export default function Home() {
           </Grid>
         </Grid>
       </Container>
+      <div className={classes.footer}>
+          
+          </div>
       <Footer/>
 
       {/* Add other sections (Testimonials, FAQ) and footer here */}
